@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-areas: 
+                "navbar navbar"
+                "sidebar main"
+                "footer footer";
+            grid-template-rows: 50px 1fr 80px;
+            grid-template-columns: 200px 1fr;
+        }
+
+        /* Note: Added the dot '.' selector for class matching */
+        .navbar {
+            grid-area: navbar;
+            border: 1px solid black;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            border: 1px solid black;
+        }
+
+        .main {
+            grid-area: main;
+            border: 1px solid black;
+        }
+
+        .footer {
+            grid-area: footer;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">navbar</div>
+    <div class="sidebar">sidebar</div>
+    <div class="main">main</div>
+    <div class="footer">footer</div>
+
+</body>
+</html>
